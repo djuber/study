@@ -34,6 +34,7 @@ From RedHat's page, we see (as of today) the following items listed under "Manag
 
 Creating and deleting and groups accounts is straightforward
 (useradd, groupadd, userdel, groupdel), but modifying accounts is non-trivial.
+Using an 'authentication service' implies probably ldap or kerberos. LDAP is a larger topic than goes here. I'll talk about the other information in this post.
 Setting passwords with passwd is straightforward,
 but managing the lifespan and expiration dates was new to me.
 As a home user, I typically set passwords to not expire (I assume most people do this).

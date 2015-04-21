@@ -18,6 +18,8 @@ additional host-only private lans 192.168.100.0 and 192.168.200.0. I added a sec
 I added the 192.168.200.0 network as a second adapter on the outsider machine.
 I confirmed I'm not able to ping from outsider to server1, but client and server are connecting on the private interface.
 
+I think this might be a good way to go to manage this going forward, [open vswitch](http://www.openvswitch.org/).
+
 I will admit, the 'faster reboots' war cry of systemd is completely well founded. If I removed the grub delay, the server would be at a login
 prompt in a few seconds. Waiting 5s for confirmation doubles the boot time! Working with kvm, when I deal with Virtuozzo at work and would have thought
 xen was the right way to go otherwise is an interesting experience. KVM is on the exam, so it's worth it to get started early.
