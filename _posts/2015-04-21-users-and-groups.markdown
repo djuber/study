@@ -8,16 +8,36 @@ categories: labnotes objectives
 One of the easier non-trivial aspects of the [ RHCSA objectives ](https://www.redhat.com/en/services/training/ex200-red-hat-certified-system-administrator-rhcsa-exam)
 is the setup of users and groups. They have an entire section for this, putting this
 on an equal footing with all of the common command line (sed, grep, su, chmod) access
-items.
+items. I would recommend starting with `info coreutils user` to get the docs for `id`, `logname`, `whoami`, `who`, `groups`, and `users`.
 
-From RedHat's page, we see (as of today) the following items.
+[ `man usermod` ](http://linuxcommand.org/man_pages/usermod8.html) shows
+these in "SEE ALSO":
 
-#### Manage users and groups
++ [ chfn(1) ](http://linuxcommand.org/man_pages/chfn1.html)
++ [ chsh(1) ](http://linuxcommand.org/man_pages/chsh1.html)
++ [ passwd(1) ](http://linuxcommand.org/man_pages/passwd1.html)
++ [ crypt(3) ](http://linuxcommand.org/man_pages/crypt3.html)
++ [ gpasswd(8) ](http://linuxcommand.org/man_pages/gpasswd8.html)
++ [ groupadd(8) ](http://linuxcommand.org/man_pages/groupadd8.html)
++ [ groupdel(8) ](http://linuxcommand.org/man_pages/groupdel8.html)
++ [ groupmod(8) ](http://linuxcommand.org/man_pages/groupmod8.html)
++ [ login.defs(5) ](http://linux.die.net/man/5/login.defs)
++ [ useradd(8) ](http://linuxcommand.org/man_pages/useradd8.html)
++ [ userdel(8) ](http://linuxcommand.org/man_pages/userdel8.html)
+
+From RedHat's page, we see (as of today) the following items listed under "Manage users and groups":
+
 + Create, delete, and modify local user accounts
 + Change passwords and adjust password aging for local user accounts
 + Create, delete, and modify local groups and group membership
 + Configure a system to use an existing authentication service for user and group information
 
+Creating and deleting and groups accounts is straightorward (useradd, groupadd, userdel, groupdel), but modifying accounts
+is non-trivial. Setting passwords with passwd is straightforward, but managing the lifespan and expiration dates
+was new to me. As a home user, I typically set passwords to not expire (I assume most people do this). At work,
+we reset passwords on all machines randomly whenever we have a user leave the company, with every machine account
+set uniquely and randomly. If we ever had a time without any turnover, the passwords would possibly stay the same
+indefinitely. 
 
 
 As a system administrator, I see group membership changed
