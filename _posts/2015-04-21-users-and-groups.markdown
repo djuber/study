@@ -16,8 +16,8 @@ these in "SEE ALSO":
 + [ chfn(1) ](http://linuxcommand.org/man_pages/chfn1.html)
 + [ chsh(1) ](http://linuxcommand.org/man_pages/chsh1.html)
 + [ passwd(1) ](http://linuxcommand.org/man_pages/passwd1.html)
-+ [ crypt(3) ](http://linuxcommand.org/man_pages/crypt3.html)
-+ [ gpasswd(8) ](http://linuxcommand.org/man_pages/gpasswd8.html)
++ [ crypt(3) ](http://linux.die.net/man/3/crypt)
++ [ gpasswd(8) ](http://linux.die.net/man/1/gpasswd)
 + [ groupadd(8) ](http://linuxcommand.org/man_pages/groupadd8.html)
 + [ groupdel(8) ](http://linuxcommand.org/man_pages/groupdel8.html)
 + [ groupmod(8) ](http://linuxcommand.org/man_pages/groupmod8.html)
@@ -32,13 +32,16 @@ From RedHat's page, we see (as of today) the following items listed under "Manag
 + Create, delete, and modify local groups and group membership
 + Configure a system to use an existing authentication service for user and group information
 
-Creating and deleting and groups accounts is straightorward (useradd, groupadd, userdel, groupdel), but modifying accounts
-is non-trivial. Setting passwords with passwd is straightforward, but managing the lifespan and expiration dates
-was new to me. As a home user, I typically set passwords to not expire (I assume most people do this). At work,
-we reset passwords on all machines randomly whenever we have a user leave the company, with every machine account
-set uniquely and randomly. If we ever had a time without any turnover, the passwords would possibly stay the same
+Creating and deleting and groups accounts is straightforward
+(useradd, groupadd, userdel, groupdel), but modifying accounts is non-trivial.
+Setting passwords with passwd is straightforward,
+but managing the lifespan and expiration dates was new to me.
+As a home user, I typically set passwords to not expire (I assume most people do this).
+At work, we reset passwords on all machines randomly whenever we have a
+user leave the company, with every machine account
+set uniquely and randomly.
+If we ever had a time without any turnover, the passwords would possibly stay the same
 indefinitely. 
-
 
 As a system administrator, I see group membership changed
 incorrectly at least once a month among my peers, in an environment where
@@ -163,9 +166,7 @@ usermod -a -G blue-team tim
 
 Either should give the end state as desired:
 
-
 {% highlight bash %}
 id tim
 uid=1004(tim) gid=1006(tim) groups=1006(tim),1003(blue-team),1009(compiler)
 {% endhighlight %}
-
