@@ -7,8 +7,6 @@ categories: commentary
 
 This week I decided the next steps in professional growth would be to study for, then certify as RHCSA and RHCE over the next year.
 Part of this was driven by an honest interest in covering my weak spots, and some was prompted by the desire to improve my marketability.
-This might be seen either as an attempt to establish my value in salary negotiations, or as a means to increase my portability.
-Only time will tell.
 
 I ordered three books (the RHEL 7 versions of many of the established study guides are on preorder, except
 Ghori's `RHCSA & RHCE Red Hat Enterprise Linux 7: Training and Exam Preparation Guide (EX200 and EX300), Third Edition` .

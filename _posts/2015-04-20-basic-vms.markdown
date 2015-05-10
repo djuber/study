@@ -2,7 +2,7 @@
 layout: post
 title:  "Basic Virtual Machine Setup"
 date:   2015-04-20 18:50:00
-categories: infrastructure labnotes
+categories:  labnotes infrastructure
 ---
 
 I configured Centos7 Minimal on a base image server1 (the installer, anaconda, is pretty slow).
